@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.nav-bar{
+  position: relative;
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.nav-bar a{
+  color: white;
+  text-decoration: none;
+}

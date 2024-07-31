@@ -1,0 +1,21 @@
+<div>
+
+  <h1>Your Cart</h1>
+
+
+    <div *ngFor="let item of cartItems">
+        <p>{{item.name}}</p>
+        <span>Price {{item.price | currency: 'USD'}}</span>
+    </div>
+
+    <div>
+      <h1>Total Price</h1>
+      {{totalPrice | currency: 'USD'}}
+    </div>
+
+    <div>
+      <button (click)="clearCart()">Clear</button>
+      <button>CheckOut</button>
+    </div>
+
+</div>

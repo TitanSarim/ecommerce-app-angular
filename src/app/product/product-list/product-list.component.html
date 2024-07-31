@@ -1,0 +1,21 @@
+<div>
+
+  <div>
+    <input (keyup)="applyFilter($event)" placeholder="Search"/>
+  </div>
+
+  <div>
+    <select (change)="sortProducts($event)">
+      <option value="priceHighToLow">High</option>
+      <option value="priceLowToHigh">Low</option>
+    </select>
+  </div>
+
+  <div *ngFor="let product of filteredProducts">
+    <img src="/assets/{{product.image_url}}" alt="img"/>
+    <h2>{{product.name}}</h2>
+    <p>Price: {{product.price | currency:'USD'}}</p>
+    <button (click)="addToCart(product)">+</button>
+  </div>
+
+</div>
